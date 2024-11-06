@@ -240,6 +240,12 @@ h6 {
   background-size: cover;
 }
 
+@media (max-width: 768px) {
+  #hero {
+    background: url("../img/hero-bg-small.jpg") top center;
+  }
+}
+
 #hero:before {
   content: "";
   background: rgba(5, 13, 24, 0.3);

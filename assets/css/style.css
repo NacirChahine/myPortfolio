@@ -693,6 +693,23 @@ section {
   padding: 0;
 }
 
+.portfolio-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  z-index: 10;
+}
+
+.portfolio-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/

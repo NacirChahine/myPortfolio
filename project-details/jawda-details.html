@@ -30,84 +30,33 @@
 </head>
 
 <body>
-<main>
+<main id="project-details-root"></main>
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-        <div class="container">
-
-            <div class="d-flex justify-content-between align-items-center">
-                <h2>Jawda Details</h2>
-                <ol>
-                    <li><a href="../index.html">Home</a></li>
-                    <li>Jawda</li>
-                </ol>
-            </div>
-
-        </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-        <div class="container">
-
-            <div class="row gy-4">
-
-                <div class="col-lg-8">
-                    <div class="portfolio-details-slider swiper">
-                        <div class="swiper-wrapper align-items-center" style="cursor: grab;">
-
-                            <div class="swiper-slide">
-                                <img src="../assets/img/portfolio/details/jawda-detail-1.png" alt="">
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="../assets/img/portfolio/details/jawda-detail-2.png" alt="">
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="../assets/img/portfolio/details/jawda-detail-3.png" alt="">
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="../assets/img/portfolio/details/jawda-detail-4.png" alt="">
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="../assets/img/portfolio/details/jawda-detail-5.png" alt="">
-                            </div>
-
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="portfolio-info">
-                        <h3>Project information</h3>
-                        <ul>
-                            <li><strong>Category</strong>: web development</li>
-                            <li><strong>Company</strong>: at iSolution</li>
-                            <li><strong>Technologies</strong>: Laravel, Filament, MySql</li>
-                            <li><strong>Project date</strong>: March, 2025</li>
-                            <li><strong>Project URL</strong>: <a href="https://jawda.ismena.com/" target="_blank" rel="noopener noreferrer">jawda.ismena.com</a></li>
-                        </ul>
-                    </div>
-                    <div class="portfolio-description">
-                        <h2>Description</h2>
-                        <p>
-                            iSolution delivers SonarxiSolution, the gold standard for clean, secure, and efficient software development.
-                            We turn code challenges into competitive advantages.
-                            Unleash the Full Potential of Your Code with Powerful Features.
-                            Discover the advanced features of Sonar, & Sonarx iSolution that drive code quality, security, and efficiency.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section><!-- End Portfolio Details Section -->
+<!-- Project Details Template Loader -->
+<script src="../assets/js/project-details-template.js"></script>
+<script>
+  window.PROJECT_PAGE = {
+    docTitle: "Nacir's projects - Jawda",
+    breadcrumbTitle: "Jawda Details",
+    breadcrumbLabel: "Jawda",
+    images: [
+      "../assets/img/portfolio/details/jawda-detail-1.png",
+      "../assets/img/portfolio/details/jawda-detail-2.png",
+      "../assets/img/portfolio/details/jawda-detail-3.png",
+      "../assets/img/portfolio/details/jawda-detail-4.png",
+      "../assets/img/portfolio/details/jawda-detail-5.png"
+    ],
+    infoItems: [
+      { label: "Category", value: "web development" },
+      { label: "Company", value: "at iSolution" },
+      { label: "Technologies", value: "Laravel, Filament, MySql" },
+      { label: "Project date", value: "March, 2025" },
+      { label: "Project URL", html: '<a href="https://jawda.ismena.com/" target="_blank" rel="noopener noreferrer">jawda.ismena.com</a>' }
+    ],
+    descriptionHtml: "iSolution delivers SonarxiSolution, the gold standard for clean, secure, and efficient software development. We turn code challenges into competitive advantages. Unleash the Full Potential of Your Code with Powerful Features. Discover the advanced features of Sonar, & Sonarx iSolution that drive code quality, security, and efficiency."
+  };
+  renderProjectDetailsPage('project-details-root', window.PROJECT_PAGE);
+</script>
 
 </main><!-- End #main -->
 

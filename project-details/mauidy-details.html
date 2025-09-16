@@ -30,82 +30,30 @@
 </head>
 
 <body>
-  <main>
+  <main id="project-details-root"></main>
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Mauidy Details</h2>
-          <ol>
-            <li><a href="../index.html">Home</a></li>
-            <li>Mauidy</li>
-          </ol>
-        </div>
-
-      </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center" style="cursor: grab;">
-
-                <div class="swiper-slide">
-                  <img src="../assets/img/portfolio/details/mauidy-detail-1.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="../assets/img/portfolio/details/mauidy-detail-2.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="../assets/img/portfolio/details/mauidy-detail-3.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="../assets/img/portfolio/details/mauidy-detail-4.png" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: web development</li>
-                <li><strong>Company</strong>: at iSolution</li>
-                <!-- <li><strong>Technologies</strong>: Laravel, Yii, MySql</li> -->
-<!--                <li><strong>Project date</strong>: 01 March, 2020</li>-->
-                <li><strong>Project URL</strong>: <a href="https://mauidy.com" target="_blank" rel="noopener noreferrer">www.mauidy.com</a></li>
-              </ul>
-            </div>
-            <div class="portfolio-description">
-              <h2>Description</h2>
-              <p>
-                Mauidy is a robust platform that allows vendors, especially salons and beauty centers, to efficiently manage their businesses.
-                Vendors can easily register their businesses and branches, along with their staff members, and manage their access levels. 
-                Staff members can log in to the vendor dashboard to approve, reschedule, or create appointments for clients. 
-                Clients, on the other hand, have access to a user-friendly platform where they can schedule 
-                single or multiple services appointments, with features such as appointment 
-                approval, cancellation, and online or in-branch payment options, ensuring a seamless and convenient experience for both businesses and clients alike.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Details Section -->
+  <!-- Project Details Template Loader -->
+  <script src="../assets/js/project-details-template.js"></script>
+  <script>
+    window.PROJECT_PAGE = {
+      docTitle: "Nacir's projects - Mauidy",
+      breadcrumbTitle: "Mauidy Details",
+      breadcrumbLabel: "Mauidy",
+      images: [
+        "../assets/img/portfolio/details/mauidy-detail-1.png",
+        "../assets/img/portfolio/details/mauidy-detail-2.png",
+        "../assets/img/portfolio/details/mauidy-detail-3.png",
+        "../assets/img/portfolio/details/mauidy-detail-4.png"
+      ],
+      infoItems: [
+        { label: "Category", value: "web development" },
+        { label: "Company", value: "at iSolution" },
+        { label: "Project URL", html: '<a href="https://mauidy.com" target="_blank" rel="noopener noreferrer">www.mauidy.com</a>' }
+      ],
+      descriptionHtml: "Mauidy is a robust platform that allows vendors, especially salons and beauty centers, to efficiently manage their businesses. Vendors can easily register their businesses and branches, along with their staff members, and manage their access levels. Staff members can log in to the vendor dashboard to approve, reschedule, or create appointments for clients. Clients, on the other hand, have access to a user-friendly platform where they can schedule single or multiple services appointments, with features such as appointment approval, cancellation, and online or in-branch payment options, ensuring a seamless and convenient experience for both businesses and clients alike."
+    };
+    renderProjectDetailsPage('project-details-root', window.PROJECT_PAGE);
+  </script>
 
   </main><!-- End #main -->
 

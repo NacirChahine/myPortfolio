@@ -30,87 +30,39 @@
 </head>
 
 <body>
-  <main>
+  <main id="project-details-root"></main>
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>FanHive Details</h2>
-          <ol>
-            <li><a href="../index.html">Home</a></li>
-            <li>FanHive</li>
-          </ol>
-        </div>
-
-      </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details h-50">
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center" style="cursor: grab;">
-
-                <div class="swiper-slide">
-                  <img src="../assets/img/portfolio/details/FanHive-detail-1.webp" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="../assets/img/portfolio/details/FanHive-detail-2.webp" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="../assets/img/portfolio/details/FanHive-detail-3.webp" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="../assets/img/portfolio/details/FanHive-detail-4.webp" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: backend development</li>
-                <li><strong>Company</strong>: ZeesWeb</li>
-                <li><strong>Technologies</strong>: Laravel, MySql</li>
-<!--                <li><strong>Project date</strong>: 01 March 2024</li>-->
-                <li><strong>Project URL</strong>: <a href="https://fanhive.io" target="_blank" rel="noopener noreferrer">www.FanHive.io</a></li>
-<!--                <li><strong>App Store</strong>: <a href="https://apps.apple.com/app/fanhive" target="_blank" rel="noopener noreferrer">iOS</a></li>-->
-<!--                <li><strong>Google Play Store</strong>: <a href="https://play.google.com/store/apps/details?id=com.mena.fanhive" target="_blank" rel="noopener noreferrer">Android</a></li>-->
-              </ul>
-            </div>
-            <div class="portfolio-description">
-              <h2>Description</h2>
-              <p>
-                <strong>FanHive</strong> brings you closer to your favorite celebrities with personalized video messages. Whether it’s a birthday, anniversary, or just a special surprise, FanHive lets you:
-              </p>
-              <ul>
-                <li><strong>Search</strong> for the perfect celebrity to match your occasion.</li>
-                <li><strong>Request</strong> a customized video message tailored to your needs.</li>
-                <li><strong>Receive</strong> your video in as little as 24 hours (where available).</li>
-              </ul>
-              <p>
-                Share your unique video with friends and family, and let the magic of FanHive create unforgettable memories!
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Details Section -->
+  <!-- Project Details Template Loader -->
+  <script src="../assets/js/project-details-template.js"></script>
+  <script>
+    window.PROJECT_PAGE = {
+      docTitle: "Nacir's projects - FanHive",
+      breadcrumbTitle: "FanHive Details",
+      breadcrumbLabel: "FanHive",
+      images: [
+        "../assets/img/portfolio/details/FanHive-detail-1.webp",
+        "../assets/img/portfolio/details/FanHive-detail-2.webp",
+        "../assets/img/portfolio/details/FanHive-detail-3.webp",
+        "../assets/img/portfolio/details/FanHive-detail-4.webp"
+      ],
+      infoItems: [
+        { label: "Category", value: "backend development" },
+        { label: "Company", value: "ZeesWeb" },
+        { label: "Technologies", value: "Laravel, MySql" },
+        { label: "Project URL", html: '<a href="https://fanhive.io" target="_blank" rel="noopener noreferrer">www.FanHive.io</a>' }
+      ],
+      descriptionHtml: `
+        <p><strong>FanHive</strong> brings you closer to your favorite celebrities with personalized video messages. Whether it’s a birthday, anniversary, or just a special surprise, FanHive lets you:</p>
+        <ul>
+          <li><strong>Search</strong> for the perfect celebrity to match your occasion.</li>
+          <li><strong>Request</strong> a customized video message tailored to your needs.</li>
+          <li><strong>Receive</strong> your video in as little as 24 hours (where available).</li>
+        </ul>
+        <p>Share your unique video with friends and family, and let the magic of FanHive create unforgettable memories!</p>
+      `
+    };
+    renderProjectDetailsPage('project-details-root', window.PROJECT_PAGE);
+  </script>
 
   </main><!-- End #main -->
 

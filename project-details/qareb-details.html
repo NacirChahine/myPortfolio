@@ -30,81 +30,29 @@
 </head>
 
 <body>
-  <main>
+  <main id="project-details-root"></main>
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Qareb Details</h2>
-          <ol>
-            <li><a href="../index.html">Home</a></li>
-            <li>Qareb</li>
-          </ol>
-        </div>
-
-      </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center" style="cursor: grab;">
-
-<!--                <div class="swiper-slide">-->
-<!--                  <img src="assets/img/portfolio/qareb-detail-1.png" alt="">-->
-<!--                </div>-->
-
-                <div class="swiper-slide">
-                  <img src="../assets/img/portfolio/details/qareb-detail-2.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="../assets/img/portfolio/details/qareb-detail-3.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="../assets/img/portfolio/details/qareb-detail-4.png" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: web development</li>
-                <li><strong>Company</strong>: at iSolution</li>
-                <!-- <li><strong>Technologies</strong>: Laravel, MySql</li> -->
-<!--                <li><strong>Project date</strong>: 01 March, 2020</li>-->
-                <li><strong>Project URL</strong>: <a href="https://qareb.com" target="_blank" rel="noopener noreferrer">www.qareb.com</a></li>
-              </ul>
-            </div>
-            <div class="portfolio-description">
-              <h2>Description</h2>
-              <p>
-                Qareb is an innovative e-commerce platform designed exclusively for the fishing community in Saudi Arabia,
-                 with plans for expansion across the GCC and MENA region. Offering a wide range of payment options,
-                  including settlement services like Tabby and Tamara, as well as flexible shipment choices,
-                   Qareb aims to provide a seamless and tailored shopping experience for fishing enthusiasts.
-
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Details Section -->
+  <!-- Project Details Template Loader -->
+  <script src="../assets/js/project-details-template.js"></script>
+  <script>
+    window.PROJECT_PAGE = {
+      docTitle: "Nacir's projects - Qareb",
+      breadcrumbTitle: "Qareb Details",
+      breadcrumbLabel: "Qareb",
+      images: [
+        "../assets/img/portfolio/details/qareb-detail-2.png",
+        "../assets/img/portfolio/details/qareb-detail-3.png",
+        "../assets/img/portfolio/details/qareb-detail-4.png"
+      ],
+      infoItems: [
+        { label: "Category", value: "web development" },
+        { label: "Company", value: "at iSolution" },
+        { label: "Project URL", html: '<a href="https://qareb.com" target="_blank" rel="noopener noreferrer">www.qareb.com</a>' }
+      ],
+      descriptionHtml: "Qareb is an innovative e-commerce platform designed exclusively for the fishing community in Saudi Arabia, with plans for expansion across the GCC and MENA region. Offering a wide range of payment options, including settlement services like Tabby and Tamara, as well as flexible shipment choices, Qareb aims to provide a seamless and tailored shopping experience for fishing enthusiasts."
+    };
+    renderProjectDetailsPage('project-details-root', window.PROJECT_PAGE);
+  </script>
 
   </main><!-- End #main -->
 

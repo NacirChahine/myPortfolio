@@ -30,94 +30,42 @@
 </head>
 
 <body>
-<main>
+<main id="project-details-root"></main>
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-        <div class="container">
-
-            <div class="d-flex justify-content-between align-items-center">
-                <h2>News AI Advance Details</h2>
-                <ol>
-                    <li><a href="../index.html">Home</a></li>
-                    <li>News AI Advance</li>
-                </ol>
-            </div>
-
-        </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-        <div class="container">
-
-            <div class="row gy-4">
-
-                <div class="col-lg-8">
-                    <div class="portfolio-details-slider swiper">
-                        <div class="swiper-wrapper align-items-center" style="cursor: grab;">
-
-                            <div class="swiper-slide">
-                                <img src="../assets/img/portfolio/details/news-ai-advance-detail-1.png" alt="">
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="../assets/img/portfolio/details/news-ai-advance-detail-2.png" alt="">
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="../assets/img/portfolio/details/news-ai-advance-detail-3.png" alt="">
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="../assets/img/portfolio/details/news-ai-advance-detail-4.png" alt="">
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="../assets/img/portfolio/details/news-ai-advance-detail-5.png" alt="">
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="../assets/img/portfolio/details/news-ai-advance-detail-6.png" alt="">
-                            </div>
-
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="portfolio-info">
-                        <h3>Project information</h3>
-                        <ul>
-                            <li><strong>Category</strong>: web development + AI</li>
-                            <li><strong>Company</strong>: Lebanese University M2 final project</li>
-                            <li><strong>Technologies</strong>: Django, SQLite, NLP/AI, Bootstrap 5, HTML/CSS, JavaScript, Newspaper3k, Requests, BeautifulSoup4</li>
-                            <li><strong>Project date</strong>: 01 Jan, 2025</li>
-                            <li><strong>Project URL</strong>: <a href="https://github.com/NacirChahine/news-ai-advance" target="_blank" rel="noopener noreferrer">github.com/NacirChahine/news-ai-advance</a></li>
-                            <li><strong>Live Demo + Memoir URL</strong>: <a href="https://nacirchahine.github.io/news-advance-memoir/" target="_blank" rel="noopener noreferrer">nacirchahine.github.io/news-advance-memoir</a></li>
-                        </ul>
-                    </div>
-                    <div class="portfolio-description">
-                        <h2>Description</h2>
-                        <p>
-                            An AI-powered news credibility analyzer built with Django. <br/>
-                            News Advance is a web application that aggregates news articles and applies
-                            AI-driven analysis tools to assess their credibility. The system includes:
-                        </p>
-                        <ul>
-                            <li>Bias & Sentiment Analysis – Detects political and emotional bias in news articles</li>
-                            <li>AI-Powered Summarization & Fact-Checking – Generates concise summaries and verifies key claims</li>
-                            <li>Real-Time Misinformation Tracker – Flags potentially misleading trending news</li>
-                        </ul>
-
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section><!-- End Portfolio Details Section -->
+<!-- Project Details Template Loader -->
+<script src="../assets/js/project-details-template.js"></script>
+<script>
+  window.PROJECT_PAGE = {
+    docTitle: "Nacir's projects - News AI Advance",
+    breadcrumbTitle: "News AI Advance Details",
+    breadcrumbLabel: "News AI Advance",
+    images: [
+      "../assets/img/portfolio/details/news-ai-advance-detail-1.png",
+      "../assets/img/portfolio/details/news-ai-advance-detail-2.png",
+      "../assets/img/portfolio/details/news-ai-advance-detail-3.png",
+      "../assets/img/portfolio/details/news-ai-advance-detail-4.png",
+      "../assets/img/portfolio/details/news-ai-advance-detail-5.png",
+      "../assets/img/portfolio/details/news-ai-advance-detail-6.png"
+    ],
+    infoItems: [
+      { label: "Category", value: "web development + AI" },
+      { label: "Company", value: "Lebanese University M2 final project" },
+      { label: "Technologies", value: "Django, SQLite, NLP/AI, Bootstrap 5, HTML/CSS, JavaScript, Newspaper3k, Requests, BeautifulSoup4" },
+      { label: "Project date", value: "01 Jan, 2025" },
+      { label: "Project URL", html: '<a href="https://github.com/NacirChahine/news-ai-advance" target="_blank" rel="noopener noreferrer">github.com/NacirChahine/news-ai-advance</a>' },
+      { label: "Live Demo + Memoir URL", html: '<a href="https://nacirchahine.github.io/news-advance-memoir/" target="_blank" rel="noopener noreferrer">nacirchahine.github.io/news-advance-memoir</a>' }
+    ],
+    descriptionHtml: `
+      <p>An AI-powered news credibility analyzer built with Django. <br/> News Advance is a web application that aggregates news articles and applies AI-driven analysis tools to assess their credibility. The system includes:</p>
+      <ul>
+        <li>Bias & Sentiment Analysis – Detects political and emotional bias in news articles</li>
+        <li>AI-Powered Summarization & Fact-Checking – Generates concise summaries and verifies key claims</li>
+        <li>Real-Time Misinformation Tracker – Flags potentially misleading trending news</li>
+      </ul>
+    `
+  };
+  renderProjectDetailsPage('project-details-root', window.PROJECT_PAGE);
+</script>
 
 </main><!-- End #main -->
 

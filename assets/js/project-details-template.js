@@ -29,6 +29,7 @@
 #project-details-root .pd-breadcrumbs ol a { color: #cfe9f9; }
 #project-details-root .pd-breadcrumbs ol a:hover { color: #fff; text-decoration: underline; }
 
+#project-details-root { min-height: 100vh; background: #f5f8fd; }
 #project-details-root .pd-portfolio.section-bg { background: #f5f8fd; }
 #project-details-root .pd-portfolio { padding: 20px 0; }
 
@@ -38,6 +39,8 @@
   box-shadow: 0 6px 18px rgba(5,13,24,.08);
   padding: 10px;
 }
+#project-details-root .portfolio-details .portfolio-details-slider .swiper-wrapper { padding: 4px; }
+#project-details-root .portfolio-details .portfolio-details-slider .swiper-slide { padding: 8px; box-sizing: border-box; }
 
 #project-details-root .portfolio-details .portfolio-details-slider img {
   display: block;
@@ -72,6 +75,7 @@
 @media (max-width: 991.98px) {
   #project-details-root .pd-breadcrumbs h2 { font-size: 20px; }
   #project-details-root .pd-portfolio { padding: 16px 0; }
+  #project-details-root .portfolio-details .portfolio-details-slider .swiper-slide { padding: 8px; }
 }}`
     const style = document.createElement('style');
     style.id = 'pd-template-styles';

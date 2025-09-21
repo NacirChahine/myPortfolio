@@ -251,6 +251,12 @@ h6 {
   }
 }
 
+/**** Chatbot Customizations ****/
+.cbw-panel .cbw-header { background: rgb(20, 157, 221); }
+.cbw-panel .cbw-input button { background: rgb(20, 157, 221); }
+button.cbw-btn[aria-label="Open chat"] { background: rgb(20, 157, 221); }
+/*button.cbw-btn[aria-label="Open chat"] { right: 24px; bottom: 24px; }*/
+
 #hero:before {
   content: "";
   background: rgba(5, 13, 24, 0.3);

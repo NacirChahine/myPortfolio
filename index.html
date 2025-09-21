@@ -612,7 +612,7 @@
     </div>
   </footer><!-- End  Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<!--  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>-->
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
@@ -625,6 +625,18 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Chatbot widget: quick start -->
+  <script>
+      (function(){
+          const s = document.createElement('script');
+          // s.src = 'http://127.0.0.1:8000/static/js/chatbot-widget.js';
+          s.src = 'https://nacwork.pythonanywhere.com/static/js/chatbot-widget.js';
+          s.async = true;
+          s.setAttribute('data-business-id', 'nacir_portfolio_key');
+          document.head.appendChild(s);
+      })();
+  </script>
 
 </body>
 

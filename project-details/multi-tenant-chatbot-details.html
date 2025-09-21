@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Nacir's projects - Multi-tenant Chatbot Platform</title>
+    <meta content="Multi-tenant chatbot platform with Django REST backend and a vanilla JS widget powered by Google Gemini." name="description">
+    <meta content="Django, REST, Chatbot, Multi-tenant, Google Gemini, JavaScript widget" name="keywords">
+
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+<main id="project-details-root"></main>
+
+<!-- Project Details Template Loader -->
+<script src="../assets/js/project-details-template.js"></script>
+<script>
+  window.PROJECT_PAGE = {
+    docTitle: "Nacir's projects - Multi-tenant Chatbot Platform",
+    breadcrumbTitle: "Multi-tenant Chatbot Platform Details",
+    breadcrumbLabel: "Multi-tenant Chatbot Platform",
+    images: [
+      // Add screenshots here later: e.g. "../assets/img/portfolio/details/chatbot-detail-1.png"
+        "../assets/img/portfolio/details/chatbot-detail-1.png",
+        "../assets/img/portfolio/details/chatbot-detail-2.png",
+        "../assets/img/portfolio/details/chatbot-detail-3.png",
+        "../assets/img/portfolio/details/chatbot-detail-4.png"
+    ],
+    infoItems: [
+      { label: "Category", value: "Full Stack Development + AI" },
+      { label: "Type", value: "Personal Project" },
+      { label: "Technologies", value: "Django REST Framework, Python, Vanilla JavaScript, Google Gemini API, HTML/CSS, Bootstrap 5" },
+      { label: "Project date", value: "2025" }
+      // { label: "Project URL", html: '<a href="" target="_blank" rel="noopener noreferrer">GitHub</a>' },
+      // { label: "Live Demo", html: '<a href="" target="_blank" rel="noopener noreferrer">Demo</a>' }
+    ],
+    descriptionHtml: `
+      <p>A multi-tenant chatbot platform that combines a Django REST backend with a lightweight, vanilla JavaScript widget.
+      It integrates Google Gemini to answer visitor questions using business-specific context per tenant.</p>
+      <ul>
+        <li>Multi-tenant configuration: each business has its own theme, greeting, and settings</li>
+        <li>Gemini-powered responses with per-business context</li>
+        <li>Clean REST API with health checks and simple schema</li>
+        <li>Drop-in widget integration for any website</li>
+      </ul>
+      <h5>Core API (v1)</h5>
+      <ul>
+        <li><code>POST /api/v1/chat/</code> — { business_id, session_id, question } ⇒ { answer, session_id, response_time }</li>
+        <li><code>GET /api/v1/business/&lt;business_id&gt;/config/</code> — widget init: name, theme, greeting</li>
+        <li><code>GET /api/v1/health/</code> — service status</li>
+      </ul>
+      <h5>Widget integration</h5>
+      <pre style="white-space: pre-wrap; background:#0b1224; color:#e9f6ff; padding:12px; border-radius:8px;">&lt;script&gt;
+  (function(){
+    var s=document.createElement('script');
+    s.src='https://YOUR_DOMAIN/static/js/chatbot-widget.js';
+    s.setAttribute('data-business-id','BUSINESS_ID');
+    s.setAttribute('data-theme','default');
+    document.head.appendChild(s);
+  })();
+&lt;/script&gt;</pre>
+    `
+  };
+  renderProjectDetailsPage('project-details-root', window.PROJECT_PAGE);
+</script>
+
+
+<!-- Vendor JS Files -->
+<script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<!-- Template Main JS File -->
+<script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
+

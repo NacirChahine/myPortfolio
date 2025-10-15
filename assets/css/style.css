@@ -455,14 +455,21 @@ section {
   padding: 0;
   margin: 0 0 6px 0;
   text-transform: uppercase;
-  display: block;
+  display: flex;
+  align-items: center;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   color: #050d18;
 }
 
+.skills .progress .skill i {
+  color: #149ddd;
+  font-size: 20px;
+  margin-right: 8px;
+}
+
 .skills .progress .skill .val {
-  float: right;
+  margin-left: auto;
   font-style: normal;
 }
 
@@ -521,6 +528,24 @@ section {
 
 .resume .resume-item ul li {
   padding-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.resume .resume-item ul li i {
+  color: #149ddd;
+  font-size: 16px;
+  margin-right: 8px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.skill-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+    filter: invert(37%) sepia(99%) saturate(447%) hue-rotate(166deg) brightness(94%) contrast(93%);
 }
 
 .resume .resume-item:last-child {

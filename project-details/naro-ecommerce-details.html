@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Nacir's projects - Naro E-Commerce</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <main id="project-details-root"></main>
+
+  <!-- Project Details Template Loader -->
+  <script src="../assets/js/project-details-template.js"></script>
+  <script>
+    window.PROJECT_PAGE = {
+      docTitle: "Nacir's projects - Naro E-Commerce",
+      breadcrumbTitle: "Naro E-Commerce Details",
+      breadcrumbLabel: "Naro E-Commerce",
+      images: [
+        "../assets/img/portfolio/details/naro-e-commerce-detail-1.png",
+        "../assets/img/portfolio/details/naro-e-commerce-detail-2.png",
+        "../assets/img/portfolio/details/naro-e-commerce-detail-3.png",
+        "../assets/img/portfolio/details/naro-e-commerce-detail-4.png",
+        "../assets/img/portfolio/details/naro-e-commerce-detail-5.png"
+      ],
+      infoItems: [
+        { label: "Category", value: "Full Stack E-Commerce Platform" },
+        { label: "Company", html: '<a href="https://narochan.bio.link" target="_blank" rel="noopener noreferrer">Naro Chan</a>' },
+        { label: "Type", value: "Personal Project" },
+        { label: "Technologies", value: "Django, Python, PostgreSQL, HTML5, CSS3, JavaScript, Chart.js, ReportLab (PDF), Bootstrap" },
+        { label: "Project date", value: "2024-2025" },
+        { label: "Project URL", html: '<a href="https://naroecom.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">naroecom.pythonanywhere.com</a>' }
+      ],
+      descriptionHtml: `
+        <p><strong>Naro E-Commerce Platform</strong></p>
+        <p>A modern, multilingual Django-based e-commerce application featuring glassmorphism design, dark/light theme support, and comprehensive shopping functionality. Built with a focus on user experience, internationalization, and robust business analytics.</p>
+        
+        <h3>Key Features</h3>
+        <ul>
+          <li><strong>Multilingual Support:</strong> Full English and Arabic support with RTL (Right-to-Left) layout for Arabic, ensuring accessibility for diverse audiences</li>
+          <li><strong>Modern UI/UX:</strong> Glassmorphism design with seamless dark/light theme switching for enhanced visual appeal</li>
+          <li><strong>Shopping Cart:</strong> Persistent cart system with intelligent session-to-database merge on user login</li>
+          <li><strong>Wishlist System:</strong> Save favorite products with heart icon toggle for authenticated users</li>
+          <li><strong>Order Management:</strong> Complete checkout flow with order tracking and status updates</li>
+          <li><strong>PDF Invoice Generation:</strong> Professional bilingual invoices (English/Arabic) with detailed order information</li>
+          <li><strong>Analytics Dashboard:</strong> Comprehensive business intelligence with interactive charts powered by Chart.js
+            <ul>
+              <li>Sales analytics: Revenue trends, order counts, average order value</li>
+              <li>Product analytics: Top-selling products, low stock alerts, inventory status</li>
+              <li>Customer analytics: New registrations, repeat customer rate, geographic distribution</li>
+              <li>Promo code performance: Usage tracking, discount amounts, conversion rates</li>
+              <li>Date filters: View data for last 7/30/90 days or custom date range</li>
+            </ul>
+          </li>
+          <li><strong>User Profiles:</strong> Customizable user preferences and multiple delivery addresses</li>
+          <li><strong>Email System:</strong> Comprehensive transactional and marketing emails
+            <ul>
+              <li>Welcome emails for new users</li>
+              <li>Order confirmations and status updates</li>
+              <li>Email verification with OTP</li>
+              <li>Newsletter campaigns</li>
+              <li>Automatic notifications via Django signals</li>
+            </ul>
+          </li>
+          <li><strong>Flexible Authentication:</strong> Login with username or email address</li>
+          <li><strong>Admin Panel:</strong> Full content management with Django admin customization</li>
+        </ul>
+
+        <h3>Technical Highlights</h3>
+        <ul>
+          <li><strong>Backend:</strong> Django framework with PostgreSQL database for robust data management</li>
+          <li><strong>Frontend:</strong> Responsive design with Bootstrap, custom CSS, and vanilla JavaScript</li>
+          <li><strong>Internationalization:</strong> Django's i18n framework for seamless language switching</li>
+          <li><strong>PDF Generation:</strong> ReportLab library for creating professional invoices</li>
+          <li><strong>Data Visualization:</strong> Chart.js for interactive analytics dashboards</li>
+          <li><strong>Email Integration:</strong> Django email backend with support for SMTP and console modes</li>
+          <li><strong>Session Management:</strong> Intelligent cart persistence across sessions and user accounts</li>
+          <li><strong>Security:</strong> Django's built-in security features including CSRF protection, password hashing, and SQL injection prevention</li>
+        </ul>
+
+        <h3>Project Structure</h3>
+        <ul>
+          <li><strong>accounts/</strong> - User authentication, profiles, and address management</li>
+          <li><strong>cart/</strong> - Shopping cart functionality with session handling</li>
+          <li><strong>orders/</strong> - Checkout, order management, and analytics</li>
+          <li><strong>store/</strong> - Products, collections, tags, and wishlist</li>
+          <li><strong>pages/</strong> - Static pages and homepage</li>
+          <li><strong>core/</strong> - Shared utilities and context processors</li>
+        </ul>
+
+        <h3>Deployment</h3>
+        <p>The application is deployed on PythonAnywhere with WhiteNoise for static file serving, demonstrating production-ready configuration and deployment practices.</p>
+      `
+    };
+    renderProjectDetailsPage('project-details-root', window.PROJECT_PAGE);
+  </script>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
+

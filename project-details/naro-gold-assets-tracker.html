@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Nacir's projects - Naro Gold Assets Tracker</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <main id="project-details-root"></main>
+
+  <!-- Project Details Template Loader -->
+  <script src="../assets/js/project-details-template.js"></script>
+  <script>
+    window.PROJECT_PAGE = {
+      docTitle: "Nacir's projects - Naro Gold Assets Tracker",
+      breadcrumbTitle: "Naro Gold Assets Tracker Details",
+      breadcrumbLabel: "Naro Gold Assets Tracker",
+      images: [
+        "../assets/img/portfolio/details/naro-gold-assets-tracker-detail-1.png",
+        "../assets/img/portfolio/details/naro-gold-assets-tracker-detail-2.png",
+        "../assets/img/portfolio/details/naro-gold-assets-tracker-detail-3.png"
+      ],
+      infoItems: [
+        { label: "Category", value: "Full Stack Investment Tracking Platform" },
+        { label: "Company", html: '<a href="https://narochan.bio.link" target="_blank" rel="noopener noreferrer">Naro Chan</a>' },
+        { label: "Type", value: "Personal Project" },
+        { label: "Technologies", value: "Django 4.2, Python 3.11+, TailwindCSS 3.4, Chart.js, SQLite/PostgreSQL, Swissquote API" },
+        { label: "Project date", value: "2025" },
+        { label: "Project URL", html: '<a href="https://narogoldassettracker.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">narogoldassettracker.pythonanywhere.com</a>' }
+      ],
+      descriptionHtml: `
+        <p><strong>GoldAssetTracker</strong></p>
+        <p>A modern Django web application for tracking and managing gold assets with real-time pricing, portfolio analytics, and comprehensive investment tracking. Built with a focus on precision, user experience, and financial insights for gold enthusiasts and investors.</p>
+        
+        <h3>Key Features</h3>
+        <ul>
+          <li><strong>Authentication & User Management:</strong>
+            <ul>
+              <li>Secure user registration and login/logout</li>
+              <li>User profile management (first name, last name, email)</li>
+              <li>Password change functionality</li>
+              <li>Password reset via email with secure tokens</li>
+              <li>Professional email templates</li>
+            </ul>
+          </li>
+          <li><strong>Real-Time Gold Price Tracking:</strong>
+            <ul>
+              <li>Live gold prices from Swissquote API</li>
+              <li>Price per Troy ounce and per gram (USD)</li>
+              <li>Automatic price updates</li>
+              <li>Historical price tracking with interactive charts</li>
+              <li>Date range filtering and price statistics</li>
+            </ul>
+          </li>
+          <li><strong>Portfolio Management:</strong>
+            <ul>
+              <li>Comprehensive asset tracking (coins, bars, jewelry)</li>
+              <li>Multiple karat purities (24K, 22K, 18K, 14K, 10K)</li>
+              <li>High-precision weight tracking (5 decimal places)</li>
+              <li>Quick-add templates for common gold products</li>
+              <li>Investment tracking with purchase price and date</li>
+              <li>ROI and profit/loss calculations</li>
+              <li>Portfolio-wide performance analytics</li>
+            </ul>
+          </li>
+          <li><strong>Data Management:</strong>
+            <ul>
+              <li>CSV export/import functionality</li>
+              <li>Batch asset creation</li>
+              <li>Comprehensive error handling and validation</li>
+            </ul>
+          </li>
+          <li><strong>Modern UI/UX:</strong>
+            <ul>
+              <li>Glassmorphism design with light/dark theme toggle</li>
+              <li>Fully responsive (mobile, tablet, desktop)</li>
+              <li>Sticky navigation with hamburger menu</li>
+              <li>Smooth transitions and animations</li>
+              <li>Theme preference persistence</li>
+            </ul>
+          </li>
+        </ul>
+        
+        <h3>Technical Highlights</h3>
+        <ul>
+          <li><strong>Comprehensive Testing:</strong> 126 passing tests covering models, views, forms, and utilities with 100% pass rate</li>
+          <li><strong>API Integration:</strong> Real-time gold price data from Swissquote API with error handling</li>
+          <li><strong>Data Visualization:</strong> Interactive charts powered by Chart.js for price history and portfolio analytics</li>
+          <li><strong>Production Ready:</strong> Deployed on PythonAnywhere with proper configuration for static files and database</li>
+        </ul>
+        
+        <h3>Deployment</h3>
+        <p>The application is deployed on PythonAnywhere with comprehensive deployment documentation, demonstrating production-ready configuration, security best practices, and scalable architecture suitable for real-world investment tracking.</p>
+      `
+    };
+    renderProjectDetailsPage('project-details-root', window.PROJECT_PAGE);
+  </script>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,13 @@
+# robots.txt for Nacir Chahine's Portfolio
+# https://nacirchahine.github.io/myPortfolio/
+
+User-agent: *
+Allow: /
+
+# Disallow access to specific directories that should not be indexed
+Disallow: /assets/vendor/
+Disallow: /.git/
+Disallow: /.idea/
+
+# Sitemap location
+Sitemap: https://nacirchahine.github.io/myPortfolio/sitemap.xml

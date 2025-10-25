@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>404 - Page Not Found | Nacir Chahine's Portfolio</title>
+  <meta content="Page not found - Nacir Chahine's Portfolio" name="description">
+  <meta content="404, page not found, error" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #040b14 0%, #0a1628 100%);
+      padding: 20px;
+    }
+
+    .error-content {
+      text-align: center;
+      color: #fff;
+      max-width: 600px;
+      padding: 40px;
+    }
+
+    .error-code {
+      font-size: 120px;
+      font-weight: 700;
+      color: #149ddd;
+      line-height: 1;
+      margin-bottom: 20px;
+      font-family: "Raleway", sans-serif;
+      text-shadow: 0 0 30px rgba(20, 157, 221, 0.5);
+    }
+
+    .error-title {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      font-family: "Raleway", sans-serif;
+      color: #fff;
+    }
+
+    .error-message {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    .error-actions {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-home, .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      font-family: "Raleway", sans-serif;
+    }
+
+    .btn-home {
+      background: #149ddd;
+      color: #fff;
+      border: 2px solid #149ddd;
+    }
+
+    .btn-home:hover {
+      background: #37b3ed;
+      border-color: #37b3ed;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(20, 157, 221, 0.4);
+    }
+
+    .btn-back {
+      background: transparent;
+      color: #149ddd;
+      border: 2px solid #149ddd;
+    }
+
+    .btn-back:hover {
+      background: #149ddd;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(20, 157, 221, 0.4);
+    }
+
+    .error-icon {
+      font-size: 80px;
+      color: #149ddd;
+      margin-bottom: 20px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .error-links {
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .error-links h4 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #fff;
+      font-family: "Raleway", sans-serif;
+    }
+
+    .quick-links {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .quick-links a {
+      color: #149ddd;
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .quick-links a:hover {
+      color: #37b3ed;
+      transform: translateX(5px);
+    }
+
+    @media (max-width: 768px) {
+      .error-code {
+        font-size: 80px;
+      }
+
+      .error-title {
+        font-size: 24px;
+      }
+
+      .error-message {
+        font-size: 16px;
+      }
+
+      .error-icon {
+        font-size: 60px;
+      }
+
+      .error-actions {
+        flex-direction: column;
+      }
+
+      .btn-home, .btn-back {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="error-page">
+    <div class="error-content">
+      <div class="error-icon">
+        <i class="bi bi-exclamation-triangle"></i>
+      </div>
+      <div class="error-code">404</div>
+      <h1 class="error-title">Oops! Page Not Found</h1>
+      <p class="error-message">
+        The page you're looking for seems to have wandered off into the digital void. 
+        Don't worry, even the best developers encounter 404s!
+      </p>
+      
+      <div class="error-actions">
+        <a href="index.html" class="btn-home">
+          <i class="bi bi-house-door"></i>
+          <span>Go Home</span>
+        </a>
+        <a href="javascript:history.back()" class="btn-back">
+          <i class="bi bi-arrow-left"></i>
+          <span>Go Back</span>
+        </a>
+      </div>
+
+      <div class="error-links">
+        <h4>Quick Links</h4>
+        <div class="quick-links">
+          <a href="index.html#about">
+            <i class="bi bi-person"></i> About
+          </a>
+          <a href="index.html#resume">
+            <i class="bi bi-file-earmark-text"></i> Resume
+          </a>
+          <a href="index.html#portfolio">
+            <i class="bi bi-collection"></i> Portfolio
+          </a>
+          <a href="index.html#contact">
+            <i class="bi bi-envelope"></i> Contact
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer" style="position: fixed; bottom: 0; width: 100%; background: transparent; padding: 20px 0;">
+    <div class="container">
+      <div class="copyright" style="color: rgba(255, 255, 255, 0.6); font-size: 14px;">
+        &copy; Copyright <strong><span>Nacir's portfolio</span></strong>
+      </div>
+      <div class="credits" style="color: rgba(255, 255, 255, 0.6); font-size: 14px;">
+        Designed by <a href="https://nassir.bio.link/" target="_blank" rel="noopener noreferrer" title="Nacir Chahine" style="color: #149ddd;">Nacir</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

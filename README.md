@@ -48,8 +48,37 @@ This is a responsive, single-page portfolio website built with modern web techno
 │   └── vendor/       # Third-party libraries
 ├── project-details/  # Individual project detail pages
 ├── index.html        # Main portfolio page
+├── robots.txt        # Search engine crawler instructions
+├── sitemap.xml       # Site structure for search engines
 └── README.md         # This file
 ```
+
+## 🔍 SEO & Discoverability
+
+This portfolio is optimized for search engines and AI crawlers with comprehensive SEO implementation:
+
+### SEO Features
+- **Meta Tags** - Descriptive titles, descriptions, and keywords on all pages
+- **Open Graph Tags** - Enhanced social media sharing with proper previews
+- **Twitter Cards** - Optimized Twitter sharing experience
+- **JSON-LD Structured Data** - Schema.org markup for better content understanding
+  - Person schema for professional profile
+  - WebSite schema for site information
+  - SoftwareApplication/VideoGame schemas for projects
+- **Canonical URLs** - Proper URL canonicalization to avoid duplicate content
+- **Robots.txt** - Configured crawler access and sitemap location
+- **Sitemap.xml** - Complete site structure with all pages indexed
+- **Semantic HTML** - Proper heading hierarchy and semantic elements
+- **Image Alt Text** - Descriptive alt attributes for accessibility and SEO
+- **Geographic Meta Tags** - Location-based metadata for local SEO
+
+### Technical SEO
+- Mobile-responsive design
+- Fast page load times
+- Clean URL structure
+- Proper use of heading tags (H1-H6)
+- Optimized images
+- Valid HTML5 markup
 
 ## 🚀 Local Development
 

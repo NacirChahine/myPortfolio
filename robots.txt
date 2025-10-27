@@ -11,3 +11,4 @@ Disallow: /.idea/
 
 # Sitemap location
 Sitemap: https://nacirchahine.github.io/myPortfolio/sitemap.xml
+sitemap: https://a519539.sitemaphosting7.com/4623824/sitemap_4623824.xml

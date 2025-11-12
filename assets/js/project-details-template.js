@@ -42,12 +42,17 @@
 #project-details-root .portfolio-details .portfolio-details-slider .swiper-wrapper { padding: 4px; }
 #project-details-root .portfolio-details .portfolio-details-slider .swiper-slide { padding: 8px; box-sizing: border-box; }
 
-#project-details-root .portfolio-details .portfolio-details-slider img {
+#project-details-root .portfolio-details .portfolio-details-slider img,
+#project-details-root .portfolio-details .portfolio-details-slider video {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: none;
+}
+
+#project-details-root .portfolio-details .portfolio-details-slider video {
+  background: #000;
 }
 
 #project-details-root .portfolio-details .col-lg-4 > .portfolio-info,
@@ -134,15 +139,27 @@
     const infoItems = Array.isArray(cfg.infoItems) ? cfg.infoItems : [];
     const descriptionHtml = cfg.descriptionHtml || '';
 
-    const slides = images.map(img => {
-      if (typeof img === 'string') {
-        return `\n      <div class="swiper-slide">\n        <img src="${escHtml(img)}" alt="">\n      </div>`;
+    const slides = images.map(item => {
+      if (typeof item === 'string') {
+        const isVideo = item.match(/\.(mp4|webm|ogg)$/i);
+        if (isVideo) {
+          return `\n      <div class="swiper-slide">\n        <video controls>\n          <source src="${escHtml(item)}" type="video/${item.split('.').pop().toLowerCase()}">\n          Your browser does not support the video tag.\n        </video>\n      </div>`;
+        }
+        return `\n      <div class="swiper-slide">\n        <img src="${escHtml(item)}" alt="">\n      </div>`;
       }
-      if (img && img.html) {
-        return `\n      <div class="swiper-slide">${img.html}</div>`;
+      if (item && item.html) {
+        return `\n      <div class="swiper-slide">${item.html}</div>`;
       }
-      const src = img && img.src ? escHtml(img.src) : '';
-      const attrs = img && img.attrs ? ' ' + img.attrs : '';
+      
+      const src = item && item.src ? escHtml(item.src) : '';
+      const attrs = item && item.attrs ? ' ' + item.attrs : '';
+      const isVideo = item && item.type === 'video';
+      
+      if (isVideo) {
+        const videoType = item.videoType || `video/${src.split('.').pop().toLowerCase()}`;
+        return `\n      <div class="swiper-slide">\n        <video controls${attrs}>\n          <source src="${src}" type="${videoType}">\n          Your browser does not support the video tag.\n        </video>\n      </div>`;
+      }
+      
       return `\n      <div class="swiper-slide">\n        <img src="${src}" alt=""${attrs}>\n      </div>`;
     }).join('\n');
 

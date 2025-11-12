@@ -192,7 +192,7 @@
   /**
    * Portfolio details slider
    */
-  new Swiper('.portfolio-details-slider', {
+  const portfolioSwiper = new Swiper('.portfolio-details-slider', {
     speed: 400,
     loop: true,
     autoplay: {
@@ -203,6 +203,41 @@
       el: '.swiper-pagination',
       type: 'bullets',
       clickable: true
+    },
+    on: {
+      init: function() {
+        // Add event listeners to videos when swiper is initialized
+        const videos = this.el.querySelectorAll('video');
+        videos.forEach(video => {
+          video.addEventListener('play', function() {
+            portfolioSwiper.autoplay.stop();
+          });
+          video.addEventListener('ended', function() {
+            // Only resume autoplay if the video is still in the active slide
+            if (this.closest('.swiper-slide').classList.contains('swiper-slide-active')) {
+              portfolioSwiper.autoplay.start();
+            }
+          });
+          video.addEventListener('pause', function() {
+            // Only resume autoplay if the video is still in the active slide
+            if (this.closest('.swiper-slide').classList.contains('swiper-slide-active')) {
+              portfolioSwiper.autoplay.start();
+            }
+          });
+        });
+      },
+      slideChange: function() {
+        // Pause any playing videos when slide changes
+        const activeSlide = this.slides[this.activeIndex];
+        const videos = activeSlide.querySelectorAll('video');
+        videos.forEach(video => {
+          video.pause();
+        });
+        // Restart autoplay if it was stopped
+        if (!this.autoplay.running) {
+          this.autoplay.start();
+        }
+      }
     }
   });
 

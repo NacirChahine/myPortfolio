@@ -283,6 +283,50 @@
   });
 
   /**
+   * Page Visit Tracking
+   */
+  (function() {
+    const TRACKING_URL = 'https://naromailing.pythonanywhere.com/api/track/';
+
+    const getCustomData = () => {
+      return {
+        page: window.location.pathname || '/',
+        timestamp: new Date().toISOString(),
+        referrer: document.referrer || null,
+        user_agent: navigator.userAgent || null
+      };
+    };
+
+    const trackPageView = async () => {
+      try {
+        const payload = {
+          event_type: 'page_view',
+          event_name: 'portfolio_home_visit',
+          custom_data: getCustomData()
+        };
+
+        await fetch(TRACKING_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload)
+        });
+      } catch (error) {
+        // Silent fail - tracking errors shouldn't break the page
+        console.log('Tracking failed:', error.message);
+      }
+    };
+
+    // Fire tracking on page load (non-blocking)
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      trackPageView();
+    } else {
+      window.addEventListener('DOMContentLoaded', trackPageView);
+    }
+  })();
+
+  /**
    * Contact Form Handling
    */
   (function() {

@@ -806,6 +806,52 @@
 
         </div>
 
+        <!-- Contact Form Row -->
+        <div class="row mt-5" data-aos="fade-up">
+          <div class="col-lg-12">
+            <div class="php-email-form">
+              <div class="section-title mb-4">
+                <h3 style="font-size: 24px; font-weight: 700; color: #173b6c;">Send Me a Message</h3>
+                <p>Fill out the form below and I'll get back to you as soon as possible.</p>
+              </div>
+
+              <form id="contactForm" novalidate>
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                    <div class="validate" id="nameError">Please enter your name.</div>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                    <div class="validate" id="emailError">Please enter a valid email address.</div>
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                  <div class="validate" id="subjectError">Please enter a subject.</div>
+                </div>
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
+                  <div class="validate" id="messageError">Please enter your message.</div>
+                </div>
+
+                <!-- Loading indicator -->
+                <div class="loading" id="formLoading">Sending message...</div>
+                
+                <!-- Error message -->
+                <div class="error-message" id="formError"></div>
+                
+                <!-- Success message -->
+                <div class="sent-message" id="formSuccess">Your message has been sent successfully. Thank you!</div>
+
+                <div class="text-center mt-3">
+                  <button type="submit" id="submitBtn">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section><!-- End Contact Section -->
 

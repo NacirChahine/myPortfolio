@@ -282,4 +282,201 @@
     })
   });
 
+  /**
+   * Contact Form Handling
+   */
+  (function() {
+    const contactForm = select('#contactForm');
+    if (!contactForm) return;
+
+    const API_URL = 'https://naromailing.pythonanywhere.com/api/send-mail/';
+
+    // Form elements
+    const nameInput = select('#name');
+    const emailInput = select('#email');
+    const subjectInput = select('#subject');
+    const messageInput = select('#message');
+    const submitBtn = select('#submitBtn');
+
+    // Feedback elements
+    const formLoading = select('#formLoading');
+    const formError = select('#formError');
+    const formSuccess = select('#formSuccess');
+
+    // Validation helpers
+    const validateEmail = (email) => {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    };
+
+    const showFieldError = (fieldId, show) => {
+      const errorEl = select(`#${fieldId}Error`);
+      if (errorEl) {
+        errorEl.style.display = show ? 'block' : 'none';
+      }
+    };
+
+    const clearAllErrors = () => {
+      ['name', 'email', 'subject', 'message'].forEach(field => {
+        showFieldError(field, false);
+      });
+      if (formError) formError.style.display = 'none';
+    };
+
+    const validateForm = () => {
+      let isValid = true;
+      clearAllErrors();
+
+      // Name validation
+      if (!nameInput.value.trim()) {
+        showFieldError('name', true);
+        isValid = false;
+      }
+
+      // Email validation
+      if (!emailInput.value.trim() || !validateEmail(emailInput.value.trim())) {
+        showFieldError('email', true);
+        isValid = false;
+      }
+
+      // Subject validation
+      if (!subjectInput.value.trim()) {
+        showFieldError('subject', true);
+        isValid = false;
+      }
+
+      // Message validation
+      if (!messageInput.value.trim()) {
+        showFieldError('message', true);
+        isValid = false;
+      }
+
+      return isValid;
+    };
+
+    const setLoading = (loading) => {
+      if (formLoading) {
+        formLoading.style.display = loading ? 'block' : 'none';
+      }
+      if (submitBtn) {
+        submitBtn.disabled = loading;
+        submitBtn.textContent = loading ? 'Sending...' : 'Send Message';
+      }
+    };
+
+    const showSuccess = () => {
+      if (formSuccess) {
+        formSuccess.style.display = 'block';
+        setTimeout(() => {
+          formSuccess.style.display = 'none';
+        }, 5000);
+      }
+    };
+
+    const showError = (message) => {
+      if (formError) {
+        formError.textContent = message || 'An error occurred. Please try again later.';
+        formError.style.display = 'block';
+      }
+    };
+
+    const clearForm = () => {
+      contactForm.reset();
+    };
+
+    // Real-time validation removal on input
+    [nameInput, emailInput, subjectInput, messageInput].forEach(input => {
+      if (input) {
+        input.addEventListener('input', function() {
+          const fieldId = this.id;
+          if (this.value.trim()) {
+            showFieldError(fieldId, false);
+          }
+        });
+
+        // Also clear on blur if valid
+        input.addEventListener('blur', function() {
+          const fieldId = this.id;
+          if (this.id === 'email') {
+            if (validateEmail(this.value.trim())) {
+              showFieldError(fieldId, false);
+            }
+          } else {
+            if (this.value.trim()) {
+              showFieldError(fieldId, false);
+            }
+          }
+        });
+      }
+    });
+
+    // Form submission handler
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Client-side validation
+      if (!validateForm()) {
+        return;
+      }
+
+      // Prepare request payload
+      const payload = {
+        subject: subjectInput.value.trim(),
+        message: messageInput.value.trim(),
+        recipient: 'chahinnacir@gmail.com',
+        sender_email: emailInput.value.trim(),
+        sender_name: nameInput.value.trim()
+      };
+
+      // Show loading state
+      setLoading(true);
+      clearAllErrors();
+
+      // Send AJAX request
+      fetch(API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload)
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        setLoading(false);
+
+        if (data.success) {
+          showSuccess();
+          clearForm();
+        } else {
+          // Handle API validation errors
+          if (data.errors) {
+            const errorMessages = Object.entries(data.errors)
+              .map(([field, errors]) => `${field}: ${errors.join(', ')}`)
+              .join('; ');
+            showError(errorMessages);
+          } else {
+            showError(data.message || 'Failed to send message. Please try again.');
+          }
+        }
+      })
+      .catch(error => {
+        setLoading(false);
+        console.error('Contact form error:', error);
+
+        if (error.name === 'TypeError' && error.message.includes('fetch')) {
+          showError('Network error. Please check your internet connection and try again.');
+        } else if (error.message.includes('HTTP error')) {
+          showError('Server error. Please try again later.');
+        } else {
+          showError('An unexpected error occurred. Please try again.');
+        }
+      });
+    });
+  })();
+
 })()

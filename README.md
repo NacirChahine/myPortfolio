@@ -38,6 +38,13 @@ This is a responsive, single-page portfolio website built with modern web techno
 - **[Boxicons](https://boxicons.com/)** - Additional icon set
 - **[Google Fonts](https://fonts.google.com/)** - Open Sans, Raleway, and Poppins fonts
 
+### AI & Development Tools
+- **Claude** - Anthropic's AI assistant
+- **Copilot** - Microsoft's AI code assistant
+- **Augment Code** - AI code assistant
+- **Windsurf** - AI-powered IDE
+- **Cursor** - AI code editor
+
 ## 📁 Project Structure
 
 ```

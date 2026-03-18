@@ -279,6 +279,14 @@ Sitemap: https://nacirchahine.github.io/myPortfolio/sitemap.xml
 ### Tools
 - Git (85%)
 
+### AI & Development Tools
+- Claude (Anthropic's AI assistant)
+- Copilot (Microsoft's AI code assistant)
+- Augment Code (AI code assistant)
+- Windsurf (AI-powered IDE)
+- Cursor (AI code editor)
+- Antigravity (AI code editor)
+
 ## Contact Information
 
 - **Email**: chahinnacir@gmail.com
@@ -287,7 +295,7 @@ Sitemap: https://nacirchahine.github.io/myPortfolio/sitemap.xml
 - **Instagram**: @nacir_chahine
 - **Facebook**: facebook.com/nacirchahin
 - **Telegram**: @nacirchahine
-- **Location**: Tripoli, Lebanon
+- **Locations**: Tripoli, Lebanon | Santa Catarina, Brazil
 
 ## Maintenance Notes
 
@@ -365,6 +373,10 @@ Sitemap: https://nacirchahine.github.io/myPortfolio/sitemap.xml
 
 ## Version History
 
+- **v2.1** (March 2026) - Portfolio Update
+  - Added new location (Santa Catarina, Brazil) to contact section
+  - Added AI & Development Tools section (Claude, Copilot, Augment Code, Windsurf, Cursor, Antigravity)
+
 - **v2.0** (October 2025) - Comprehensive SEO implementation
   - Added JSON-LD structured data to all pages
   - Enhanced meta tags with detailed descriptions
@@ -381,5 +393,5 @@ Sitemap: https://nacirchahine.github.io/myPortfolio/sitemap.xml
 
 ---
 
-*Last Updated: October 25, 2025*
+*Last Updated: March 2026*
 *Maintained by: Nacir Chahine*

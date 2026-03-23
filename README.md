@@ -44,6 +44,7 @@ This is a responsive, single-page portfolio website built with modern web techno
 - **Augment Code** - AI code assistant
 - **Windsurf** - AI-powered IDE
 - **Cursor** - AI code editor
+- **Antigravity** - AI code editor
 
 ## 📁 Project Structure
 

@@ -296,6 +296,19 @@ button.cbw-btn[aria-label="Open chat"] { background: rgb(20, 157, 221); }
   border-bottom: 3px solid #149ddd;
 }
 
+#hero p.tech-stack {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-top: 15px;
+  margin-bottom: 0;
+  padding: 8px 20px;
+  background: rgba(20, 157, 221, 0.15);
+  border-radius: 30px;
+  display: inline-block;
+  border: 1px solid rgba(20, 157, 221, 0.3);
+}
+
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
@@ -312,6 +325,27 @@ button.cbw-btn[aria-label="Open chat"] { background: rgb(20, 157, 221); }
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
+  }
+
+  #hero p {
+    font-size: 22px;
+    min-height: 36px;
+    white-space: nowrap;
+    margin-bottom: 30px;
+  }
+
+  #hero p span.typed {
+    /*display: inline-block;*/
+    /*min-width: 160px;*/
+  }
+
+  #hero p.tech-stack {
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 6px 15px;
+    white-space: normal;
+    min-height: auto;
+    margin-bottom: 0;
   }
 }
 

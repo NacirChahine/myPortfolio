@@ -3,11 +3,11 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #272829;
+  color: #292727;
   /* Apply the 'default' cursor style to the entire body */
-  cursor: default;
+  /*cursor: default;*/
   /* to prevent copying content*/
-  user-select: none;
+  /*user-select: none;*/
 }
 
 a {
